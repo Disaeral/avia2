@@ -1,7 +1,6 @@
 import { filterTickets } from './filterTickets'
 import {  sortByPrice, sortByTime  } from './sortTickets'
-import {checkboxesHandler} from './checkboxesHandler'
-import { FILTER_TICKETS, SORT_TICKETS_BY_PRICE, SORT_TICKETS_BY_TIME } from './types'
+import { FILTER_TICKETS, RESET_FILTER, SORT_TICKETS_BY_PRICE, SORT_TICKETS_BY_TIME } from './types'
 
 
 const initialState = {
@@ -40,7 +39,7 @@ const initialState = {
           origin: "Ebenya2",
           destination: "DC3",
           date: "December 31, 1995 03:12:00",
-          stops: ["JOP"],
+          stops: [],
           duration: 211,
         },
       ],
@@ -85,24 +84,18 @@ const initialState = {
         },
       ],
     }],
-    switch: null,
-    checkboxes: [
-      {id: 4, checked: false},
-      {id: 0, checked: false},
-      {id: 1, checked: false},
-      {id: 2, checked: false},
-      {id: 3, checked: false}
-  ]
 }
-
+ 
 export const ticketReducer = (state = initialState, action)=>{
     switch (action.type) {
         case FILTER_TICKETS: 
-        return {...state, checkboxes: checkboxesHandler(state.checkboxes, action.payload), tickets: filterTickets(state.tickets, action.payload)}
+        return {...state, tickets: filterTickets(state.tickets, action.payload)}
+        case RESET_FILTER:
+        return {...state, tickets: initialState.tickets}
         case SORT_TICKETS_BY_TIME:
-        return {...state, switch:'right', tickets: sortByTime(state.tickets)}
+        return {...state, tickets: sortByTime(state.tickets)}
         case SORT_TICKETS_BY_PRICE:
-        return {...state, switch:'left', tickets: sortByPrice(state.tickets)}
+        return {...state, tickets: sortByPrice(state.tickets)}
         default: return state
     }
 }

@@ -1,4 +1,4 @@
-import { FILTER_TICKETS, SORT_TICKETS_BY_PRICE, SORT_TICKETS_BY_TIME } from "./types";
+import { CHECK_CHECKBOX, FILTER_TICKETS, RESET_FILTER, SORT_TICKETS_BY_PRICE, SORT_TICKETS_BY_TIME, SWITCH_LEFT, SWITCH_RIGHT, UNCHECK_CHECKBOX } from "./types";
 
 export function sortTicketsByPrice () {
     return {
@@ -16,5 +16,32 @@ export function filterTickets (checkboxID) {
         payload: checkboxID
     }   
 }
-
-
+export function resetFilter () {
+    return {
+        type: RESET_FILTER
+    }
+}
+export function switchLeft () {
+    return {
+        type: SWITCH_LEFT
+       
+    }
+}
+export function switchRight () {
+    return {
+        type: SWITCH_RIGHT
+        
+    }
+}
+export function check (checkboxID) {
+    return {
+        type: CHECK_CHECKBOX,
+        payload: checkboxID
+    }
+}
+export function uncheck (checkboxID) {
+    return {
+        type:UNCHECK_CHECKBOX,
+        payload: checkboxID
+    }
+}

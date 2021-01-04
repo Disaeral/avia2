@@ -1,25 +1,29 @@
 import React from "react";
 import SidebarItem from '../components/SidebarItem.js'
+import {connect} from 'react-redux'
 
 
-function Sidebar(props) {
+
+const Sidebar = ({checkboxes}) => {
+
   const names = ['Все', 'Без пересадок', '1 пересадка', '2 пересадки', '3 и более']
   const values = [4, 0, 1, 2, 3]
   
-
-  let idx = 0;
+ 
+  
   return (
     <div className="Sidebar">
       <div className="Sidebar-header">Количество пересадок</div>
       <form>
-        {names.map((option)=>{
-          idx++;
+        {names.map((name, i)=>{
+          
           return (
             <SidebarItem
-            
-            key = {idx-1} 
-            name = {names[idx-1]}
-            value = {values[idx-1]}
+            checkboxes={checkboxes}
+            notChecked={checkboxes[i]}
+            key = {i} 
+            name = {name}
+            value = {values[i]}
             />
           )
         })}
@@ -30,4 +34,11 @@ function Sidebar(props) {
   );
 }
 
-export default Sidebar;
+const mapStateToProps = (state) => {
+  
+  return {
+    checkboxes: state.checkboxes.checkboxes
+  }
+}
+
+export default connect(mapStateToProps)(Sidebar);
