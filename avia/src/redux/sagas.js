@@ -24,7 +24,7 @@ async function fetchTickets() {
         return await data
     }
     catch (e) {
-        console.error(e.message)
+        console.error(e)
     }
     
 }   
