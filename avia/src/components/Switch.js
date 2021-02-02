@@ -26,6 +26,7 @@ const Switch = ({switchState}) => {
         <span className={classListR} onClick={()=>{dispatch(sortTicketsByTime()); dispatch(switchRight())}}>
             fast
         </span>
+        
       </div>
 }
  const mapStateToProps = (state) => {

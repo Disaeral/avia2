@@ -5,7 +5,7 @@ import Segment from "./Segment.js";
 
 function Ticket({ ticket, segments }) {
 
-  
+  let srcString = `http://pics.avs.io/99/36/${ticket.carrier}.png`
   let i = 0;
   function forTransfers (segment) {
     if (segment.stops.length === 1) {
@@ -26,10 +26,10 @@ function Ticket({ ticket, segments }) {
       <div className="Ticket-header">
         <div className="Cost">{ticket.price} P</div>
         <div className="Logo">
-          {ticket.carrier}
+          
           <img
             alt="No Internet"
-            src="https://i.mycdn.me/image?id=811774253153&plc=WEB&tkn=*JCBZ6BS_REyd9Aa37kahrMxKrTE&fn=sqr_288"
+            src={srcString}
             height="36px"
           />
         </div>

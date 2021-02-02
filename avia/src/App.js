@@ -3,10 +3,10 @@ import "./App.css";
 import Header from "./components/Header.js";
 import Sidebar from "./components/Sidebar.js";
 import Main from "./components/Main.js";
+import LoadButton from './components/LoadButton'
 
 
-
-function App() {  
+const App = () => {  
 
   return (
     <div className="wrapper">
@@ -15,8 +15,9 @@ function App() {
       </div>
       <div className="Horizontal-wrapper">
         <Sidebar />
-        
+        <LoadButton />
         <Main />
+      
       </div>
     </div>
   );

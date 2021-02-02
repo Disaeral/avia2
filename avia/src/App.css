@@ -163,7 +163,18 @@ body {
 }
 
 
-.Tickets {}
+#tickets {
+  cursor: pointer;
+  color:#e5e5e5;
+  background-color:  #2196F3;
+  max-height: 18px;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  padding:3px 5px 9px 5px;
+  margin:2px;
+  
+}
 
 .Ticket {
   width: 502px;

@@ -12,9 +12,9 @@ function Segment({segment, forTransfers}) {
     if (!transfers) {
       transfers = null
     }
-    let departureTime = segment.date.slice(-8, -3);
-    let flightHours = parseInt(segment.date.slice(-8, -6 ))+(Math.floor(durationRaw/60));
-    let flightMinutes = parseInt(segment.date.slice(-5, -3))+durationRaw%60;
+    let departureTime = segment.date.slice(-13, -8);
+    let flightHours = parseInt(segment.date.slice(-13, -11 ))+(Math.floor(durationRaw/60));
+    let flightMinutes = parseInt(segment.date.slice(-10, -8))+durationRaw%60;
     if (flightMinutes >= 60) {
         flightHours+=(Math.floor(flightMinutes/60));
         flightMinutes=(Math.floor(flightMinutes%60))
@@ -27,6 +27,9 @@ function Segment({segment, forTransfers}) {
     if (flightHours<10) {
       flightHours=`0${flightHours}`
       
+    }
+    if (flightHours>=24) {
+      flightHours -=24;
     }
     
     return <div className={classes}>
