@@ -1,11 +1,20 @@
-import React from 'react'
-import {useDispatch} from 'react-redux'
-import { loadTickets, requestTickets } from '../redux/actions'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { requestTickets } from "../redux/actions";
+
 const LoadButton = () => {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  return (
+    <span
+      className="button"
+      id="tickets"
+      onClick={() => {
+        dispatch(requestTickets());
+      }}
+    >
+      get tickets
+    </span>
+  );
+};
 
-    return <span className="button" id="tickets" onClick={()=>{dispatch(requestTickets())}}>get tickets</span>
-}
-
-export default LoadButton
- 
+export default LoadButton;

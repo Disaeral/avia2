@@ -3,11 +3,9 @@ import "./App.css";
 import Header from "./components/Header.js";
 import Sidebar from "./components/Sidebar.js";
 import Main from "./components/Main.js";
-import LoadButton from './components/LoadButton'
+import LoadButton from "./components/LoadButton";
 
-
-const App = () => {  
-
+const App = () => {
   return (
     <div className="wrapper">
       <div className="Vertical-wrapper">
@@ -17,10 +15,9 @@ const App = () => {
         <Sidebar />
         <LoadButton />
         <Main />
-      
       </div>
     </div>
   );
-}
+};
 
 export default App;

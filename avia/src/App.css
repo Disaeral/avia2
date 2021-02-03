@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-* {}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 body {
   background-color: #e5e5e5;
-  
-  
-  
 }
 
 .Vertical-wrapper {
@@ -19,19 +14,13 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
-
-
 
 .Header {
   width: 100%;
   height: 160px;
-  
   text-align: center;
 }
-
-
 
 .Sidebar {
   width: 252px;
@@ -41,29 +30,23 @@ body {
   border-radius: 5px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
-
 }
 
 .Sidebar-header {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 12px;
-  /* identical to box height, or 100% */
   margin: 20px;
-  
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 
 .Sidebar-item {
   line-height: 20px;
-
-
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -78,7 +61,7 @@ body {
 
 .Sidebar-item:hover {
   cursor: pointer;
-  background: #F1FCFF;
+  background: #f1fcff;
 }
 
 .Sidebar-item input[type="checkbox"] {
@@ -90,37 +73,29 @@ body {
   cursor: pointer;
 }
 
-.Sidebar-item input[type="checkbox"]+label::before {
-  content: '';
+.Sidebar-item input[type="checkbox"] + label::before {
+  content: "";
   width: 20px;
   display: inline-block;
   height: 20px;
   margin-right: 10px;
-  border: 1px solid #9ABBCE;
+  border: 1px solid #9abbce;
   box-sizing: border-box;
   border-radius: 2px;
   vertical-align: middle;
-
-
 }
 
-.Sidebar-item input[type="checkbox"]:checked+label::before {
-  border: 1px solid #2196F3;
+.Sidebar-item input[type="checkbox"]:checked + label::before {
+  border: 1px solid #2196f3;
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.28571 8L0 4.16123L1.20857 3.0787L4.28571 5.82726L10.7914 0L12 1.09021L4.28571 8Z' fill='%232196F3'/%3E%3C/svg%3E%0A");
 }
 
-.Checkbox {}
-
-
-
 .Main {
   width: 502px;
 }
-
-
 
 .Switch {
   width: 504px;
@@ -133,24 +108,24 @@ body {
 }
 
 .Switch-active {
-  padding-top: calc(50px/4);
-  background-color: #2196F3;
-  color:#fff;
-  border: 1px solid #DFE5EC;
+  padding-top: calc(50px / 4);
+  background-color: #2196f3;
+  color: #fff;
+  border: 1px solid #dfe5ec;
   flex-grow: 1;
   cursor: pointer;
   text-align: center;
-  
+
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Switch-disabled {
-  padding-top: calc(50px/4);
+  padding-top: calc(50px / 4);
   background-color: #fff;
-  color:#000;
+  color: #000;
   flex-grow: 1;
-  border: 1px solid #DFE5EC;
-  
+  border: 1px solid #dfe5ec;
+
   cursor: pointer;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -162,18 +137,16 @@ body {
   border-radius: 0px 5px 5px 0px;
 }
 
-
 #tickets {
   cursor: pointer;
-  color:#e5e5e5;
-  background-color:  #2196F3;
+  color: #e5e5e5;
+  background-color: #2196f3;
   max-height: 18px;
   border-radius: 4px;
   text-align: center;
   vertical-align: middle;
-  padding:3px 5px 9px 5px;
-  margin:2px;
-  
+  padding: 3px 5px 9px 5px;
+  margin: 2px;
 }
 
 .Ticket {
@@ -187,7 +160,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  
 }
 
 .Ticket-header {
@@ -199,65 +171,57 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .Ticket-info {
-
   width: 462px;
   color: #f4f4f4;
   margin: 0px 20px 0px 20px;
   display: flex;
   justify-content: space-between;
-
 }
 
 .Route,
 .Stops,
 .Length {
-
-  width: calc((342px)/3)
+  width: calc((342px) / 3);
 }
 
 .Hide {
-  display: hidden ;
+  display: hidden;
 }
 
-
 .Cost {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
-  color: #2196F3;
+  color: #2196f3;
 }
 
 #Upper,
 #Lower {
   display: flex;
   align-items: center;
-
 }
 
 #Upper {
-
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #A0B0B9;
+  color: #a0b0b9;
 }
 
 #Lower {
-
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
